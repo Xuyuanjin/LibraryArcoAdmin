@@ -3,36 +3,9 @@
     <a-layout class="layout-demo">
       <!--侧边栏-->
       <a-layout-sider hide-trigger collapsible :collapsed="collapsed">
-        <div class="logo" />
+        <div class="logo"/>
+        <!--封装左侧菜单组件-->
         <LeftMuen></LeftMuen>
-<!--        <a-menu-->
-<!--            :defaultOpenKeys="['1']"-->
-<!--            :defaultSelectedKeys="['0_3']"-->
-<!--            :style="{ width: '100%' }"-->
-<!--            @menuItemClick="onClickMenuItem"-->
-<!--        >-->
-<!--          <a-menu-item key="0_1">-->
-<!--            <IconHome />-->
-<!--            首页-->
-<!--          </a-menu-item>-->
-<!--          <a-menu-item key="0_2">-->
-<!--            <IconCalendar />-->
-<!--            用户管理-->
-<!--          </a-menu-item>-->
-<!--          <a-menu-item key="0_3">-->
-<!--            <IconCalendar />-->
-<!--            图书管理-->
-<!--          </a-menu-item>-->
-
-<!--          <a-sub-menu>-->
-<!--            <template #title>-->
-<!--              <span><IconCalendar />关于我们</span>-->
-<!--            </template>-->
-<!--            <a-menu-item key="4_1">菜单 1</a-menu-item>-->
-<!--            <a-menu-item key="4_2">菜单 2</a-menu-item>-->
-<!--            <a-menu-item key="4_3">菜单 3</a-menu-item>-->
-<!--          </a-sub-menu>-->
-<!--        </a-menu>-->
 
       </a-layout-sider>
 
@@ -41,8 +14,8 @@
         <a-layout-header style="padding-left: 20px;">
           <!--折叠菜单按钮-->
           <a-button shape="round" @click="onCollapse">
-            <IconCaretRight v-if="collapsed" />
-            <IconCaretLeft v-else />
+            <IconCaretRight v-if="collapsed"/>
+            <IconCaretLeft v-else/>
           </a-button>
           <!--头像-->
           <a-space size="large">
@@ -81,7 +54,7 @@
           </div>
           <!--内容-->
           <a-layout-content>
-            <a-table :columns="columns" :data="Listdata" :pagination="pagination" >
+            <a-table :columns="columns" :data="Listdata" :pagination="pagination">
               <template #optional="{ record }">
                 <a-button @click="showEditUserModal(record)" status="warning">编辑</a-button>
                 <a-button status="danger" style="margin-left: 10px;" @click="getDeleteUser(record.uid)">删除</a-button>
@@ -97,16 +70,17 @@
     </a-layout>
 
     <!-- 新增用户弹框 -->
-    <a-modal v-model:visible="addUserModalVisible" title="新增用户" @cancel="handleCancelAddUser" @ok="handleSubmitAddUser">
+    <a-modal v-model:visible="addUserModalVisible" title="新增用户" @cancel="handleCancelAddUser"
+             @ok="handleSubmitAddUser">
       <a-form :model="addUserForm" :rules="rules" ref="addUserFormRef">
         <a-form-item field="uid" label="用户ID">
           <a-input v-model="addUserForm.uid" allow-clear/>
         </a-form-item>
         <a-form-item field="userName" label="用户名">
-          <a-input v-model="addUserForm.userName" allow-clear />
+          <a-input v-model="addUserForm.userName" allow-clear/>
         </a-form-item>
         <a-form-item field="realName" label="真实名">
-          <a-input v-model="addUserForm.realName" allow-clear />
+          <a-input v-model="addUserForm.realName" allow-clear/>
         </a-form-item>
         <a-form-item field="passWord" label="密码">
           <a-input-password
@@ -117,25 +91,26 @@
           />
         </a-form-item>
         <a-form-item field="uaddress" label="地址">
-          <a-input v-model="addUserForm.uaddress" allow-clear />
+          <a-input v-model="addUserForm.uaddress" allow-clear/>
         </a-form-item>
         <a-form-item field="uphone" label="电话">
-          <a-input v-model="addUserForm.uphone" allow-clear />
+          <a-input v-model="addUserForm.uphone" allow-clear/>
         </a-form-item>
       </a-form>
     </a-modal>
 
     <!-- 编辑用户弹框 -->
-    <a-modal v-model:visible="editUserModalVisible" title="编辑用户" @cancel="handleCancelEditUser" @ok="handleSubmitEditUser">
+    <a-modal v-model:visible="editUserModalVisible" title="编辑用户" @cancel="handleCancelEditUser"
+             @ok="handleSubmitEditUser">
       <a-form :model="editUserForm" :rules="rules" ref="editUserFormRef">
         <a-form-item field="uid" label="用户ID">
           <a-input v-model="editUserForm.uid" allow-clear disabled/>
         </a-form-item>
         <a-form-item field="userName" label="用户名">
-          <a-input v-model="editUserForm.userName" allow-clear />
+          <a-input v-model="editUserForm.userName" allow-clear/>
         </a-form-item>
         <a-form-item field="realName" label="真实名">
-          <a-input v-model="editUserForm.realName" allow-clear />
+          <a-input v-model="editUserForm.realName" allow-clear/>
         </a-form-item>
         <a-form-item field="passWord" label="密码">
           <a-input-password
@@ -146,10 +121,10 @@
           />
         </a-form-item>
         <a-form-item field="uaddress" label="地址">
-          <a-input v-model="editUserForm.uaddress" allow-clear />
+          <a-input v-model="editUserForm.uaddress" allow-clear/>
         </a-form-item>
         <a-form-item field="uphone" label="电话">
-          <a-input v-model="editUserForm.uphone" allow-clear />
+          <a-input v-model="editUserForm.uphone" allow-clear/>
         </a-form-item>
       </a-form>
     </a-modal>
@@ -158,11 +133,11 @@
 
 <script>
 import axios from "axios";
-import { bUrl } from "@/api/BaseUrl"; // 引入基础url函数
+import {bUrl} from "@/api/BaseUrl"; // 引入基础url函数
 import {Load} from "@/api/UserRequst";// 引入请求函数
-import { defineComponent, ref } from 'vue';
-import { Message } from '@arco-design/web-vue';
-import { IconCaretRight, IconCaretLeft, IconHome, IconCalendar } from '@arco-design/web-vue/es/icon';
+import {defineComponent, ref} from 'vue';
+import {Message} from '@arco-design/web-vue';
+import {IconCaretRight, IconCaretLeft, IconHome, IconCalendar} from '@arco-design/web-vue/es/icon';
 import LeftMuen from "@/components/LeftMuen.vue";
 
 export default defineComponent({
@@ -183,7 +158,7 @@ export default defineComponent({
       addUserModalVisible: false,
       editUserModalVisible: false,
       addUserForm: {
-        uid:'',
+        uid: '',
         userName: '',
         realName: '',
         passWord: '',
@@ -191,7 +166,7 @@ export default defineComponent({
         uphone: ''
       },
       editUserForm: {
-        uid:'',
+        uid: '',
         userName: '',
         realName: '',
         passWord: '',
@@ -201,28 +176,28 @@ export default defineComponent({
       visibility: true,
       rules: {
         uid: [
-          { required: true, message: '请输入用户ID', trigger: 'blur' },
-          { pattern: /^[0-9]+$/, message: '用户ID必须为数字', trigger: 'blur' }
+          {required: true, message: '请输入用户ID', trigger: 'blur'},
+          {pattern: /^[0-9]+$/, message: '用户ID必须为数字', trigger: 'blur'}
         ],
         userName: [
-          { required: true, message: '请输入用户名', trigger: 'blur' },
-          { min: 3, max: 20, message: '用户名长度为3-20个字符', trigger: 'blur' }
+          {required: true, message: '请输入用户名', trigger: 'blur'},
+          {min: 3, max: 20, message: '用户名长度为3-20个字符', trigger: 'blur'}
         ],
         realName: [
-          { required: true, message: '请输入真实名', trigger: 'blur' },
-          { min: 2, max: 20, message: '真实名长度为2-20个字符', trigger: 'blur' }
+          {required: true, message: '请输入真实名', trigger: 'blur'},
+          {min: 2, max: 20, message: '真实名长度为2-20个字符', trigger: 'blur'}
         ],
         passWord: [
-          { required: true, message: '请输入密码', trigger: 'blur' },
-          { min: 6, max: 20, message: '密码长度为6-20个字符', trigger: 'blur' }
+          {required: true, message: '请输入密码', trigger: 'blur'},
+          {min: 6, max: 20, message: '密码长度为6-20个字符', trigger: 'blur'}
         ],
         uaddress: [
-          { required: true, message: '请输入地址', trigger: 'blur' },
-          { min: 5, max: 50, message: '地址长度为5-50个字符', trigger: 'blur' }
+          {required: true, message: '请输入地址', trigger: 'blur'},
+          {min: 5, max: 50, message: '地址长度为5-50个字符', trigger: 'blur'}
         ],
         uphone: [
-          { required: true, message: '请输入电话', trigger: 'blur' },
-          { pattern: /^[0-9]+$/, message: '电话必须为数字', trigger: 'blur' }
+          {required: true, message: '请输入电话', trigger: 'blur'},
+          {pattern: /^[0-9]+$/, message: '电话必须为数字', trigger: 'blur'}
         ]
       },
       columns: [
@@ -269,6 +244,9 @@ export default defineComponent({
     };
   },
   methods: {
+    tousers() {
+      this.$router.replace("/users")
+    },
     // 处理菜单点击
     onClickMenuItem(key, keyPath) {
       console.log(key, keyPath);
@@ -301,7 +279,7 @@ export default defineComponent({
     getDeleteUser(uid) {
       axios.delete(bUrl() + "/user/" + uid).then(res => {
         this.getLoad(); // 重新加载用户列表
-        Message.success({ content: '用户删除成功', showIcon: true });
+        Message.success({content: '用户删除成功', showIcon: true});
       }).catch(err => {
         console.log("删除失败");
       });
@@ -320,22 +298,22 @@ export default defineComponent({
       this.$refs.addUserFormRef.validate().then(() => {
         this.addUser();
       }).catch(() => {
-        Message.error({ content: '请检查输入内容', showIcon: true });
+        Message.error({content: '请检查输入内容', showIcon: true});
       });
     },
     // 新增用户
     addUser() {
       axios.post(bUrl() + "/user", this.addUserForm).then(res => {
         this.getLoad(); // 重新加载用户列表
-        Message.success({ content: '用户新增成功', showIcon: true });
+        Message.success({content: '用户新增成功', showIcon: true});
         this.handleCancelAddUser(); // 关闭弹框
       }).catch(err => {
-        Message.error({ content: '用户新增失败', showIcon: false });
+        Message.error({content: '用户新增失败', showIcon: false});
       });
     },
     // 显示编辑用户弹框
     showEditUserModal(record) {
-      this.editUserForm = { ...record }; // 填充表单
+      this.editUserForm = {...record}; // 填充表单
       this.editUserModalVisible = true;
     },
     // 关闭编辑用户弹框
@@ -347,14 +325,14 @@ export default defineComponent({
       this.$refs.editUserFormRef.validate().then(() => {
         this.updateUser();
       }).catch(() => {
-        Message.error({ content: '请检查输入内容', showIcon: true });
+        Message.error({content: '请检查输入内容', showIcon: true});
       });
     },
     // 更新用户信息
     updateUser() {
       axios.put(bUrl() + "/user/" + this.editUserForm.uid, this.editUserForm).then(res => {
         this.getLoad(); // 重新加载用户列表
-        Message.success({ content: '用户信息更新成功', showIcon: true });
+        Message.success({content: '用户信息更新成功', showIcon: true});
         this.handleCancelEditUser(); // 关闭弹框
       }).catch(err => {
         console.log("更新用户失败");

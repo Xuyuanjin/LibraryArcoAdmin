@@ -2,6 +2,7 @@ import {createRouter, createWebHashHistory, createWebHistory} from 'vue-router'
 import Login from "@/views/Login.vue";
 import UserManage from "@/views/UserManage.vue";
 import Test from "@/views/Test.vue";
+import bookManage from "@/views/BookManage.vue";
 
 const routes = [
   {
@@ -18,6 +19,11 @@ const routes = [
     path: '/users',
     name: 'users',
     component: UserManage
+  },
+  {
+    path: '/books',
+    name: 'books',
+    component: bookManage
   },
 ]
 
