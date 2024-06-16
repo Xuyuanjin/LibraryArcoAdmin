@@ -4,11 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b43b74a0-37f2-4857-a2ae-b3a1882df387" name="更改" comment="init" />
+    <list default="true" id="b43b74a0-37f2-4857-a2ae-b3a1882df387" name="更改" comment="init">
+      <change afterPath="$PROJECT_DIR$/src/components/LeftMuen.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/BookManage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UserManage/AddUser.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UserManage/EditUser.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/UserManage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserManage.vue" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints>
+      <file url="mock:///RestfulBox-Editor:Body" />
+      <file url="mock:///RestfulBox-Editor:Config" />
+      <file url="mock:///RestfulBox-Editor:Headers" />
+      <file url="mock:///RestfulBox-Editor:Info" />
+      <file url="mock:///RestfulBox-Editor:Params" />
+      <file url="mock:///RestfulBox-Editor:Response" />
+    </disable_hints>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -37,7 +56,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/AzMyCode/AMyCode/VueProject/ArcoAdmin",
+    "last_opened_file_path": "D:/AzMyCode/AMyCode/VueProject/MyVantAxios",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -45,8 +64,8 @@
     "nodejs_package_manager_path": "npm",
     "npm.serve.executor": "Run",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "editing.templates",
-    "ts.external.directory.path": "D:\\PC SoftWare\\RuanJi\\WebStorm 2024.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "D:\\PC SoftWare\\RuanJi\\IntelliJ IDEA 2024.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -57,6 +76,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\AzMyCode\AMyCode\VueProject\ArcoAdmin\src\views" />
       <recent name="D:\AzMyCode\AtMyCode\VueProject\ArcoAdmin\src\assets" />
       <recent name="D:\AzMyCode\AtMyCode\VueProject\ArcoAdmin\src\store" />
     </key>
@@ -111,6 +131,8 @@
       <workItem from="1718163482279" duration="140000" />
       <workItem from="1718441581012" duration="179000" />
       <workItem from="1718456845108" duration="1373000" />
+      <workItem from="1718481865343" duration="1867000" />
+      <workItem from="1718485474786" duration="10343000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
