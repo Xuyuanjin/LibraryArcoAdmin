@@ -4,30 +4,66 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b43b74a0-37f2-4857-a2ae-b3a1882df387" name="更改" comment="init">
-      <change afterPath="$PROJECT_DIR$/src/components/LeftMuen.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/BookManage.vue" afterDir="false" />
+    <list default="true" id="b43b74a0-37f2-4857-a2ae-b3a1882df387" name="更改" comment="第五次2026.6.15">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/chunk-vendors.928a50e7.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/index.4757e2cc.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/chunk-vendors.822d16b2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/chunk-vendors.822d16b2.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/index.3f9930b5.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/index.3f9930b5.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/thesis-snapshot.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/thesis-snapshot.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/BookRequest.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/BorrowRequest.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/CategoryRequest.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/ExportRequest.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/FavoriteRequest.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/LogRequest.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/MessageRequest.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/NoticeRequest.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/ReservationRequest.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/ReviewRequest.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/ShelfRequest.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/StatsRequest.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/UploadRequest.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/request.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AppLayout.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AvatarTop.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/BookStore.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/BorrowManage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/CategoryManage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Favorite.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Home.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/MessageCenter.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/NoticeManage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/OperationLog.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Profile.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Register.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Reservation.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/ShelfManage.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UserManage/AddUser.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UserManage/EditUser.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/UserRequst.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/UserRequst.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/quanju.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/quanju.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LeftMuen.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LeftMeun.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/BookManage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/BookManage.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Login.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/UserManage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserManage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DaemonCodeAnalyzer">
-    <disable_hints>
-      <file url="mock:///RestfulBox-Editor:Body" />
-      <file url="mock:///RestfulBox-Editor:Config" />
-      <file url="mock:///RestfulBox-Editor:Headers" />
-      <file url="mock:///RestfulBox-Editor:Info" />
-      <file url="mock:///RestfulBox-Editor:Params" />
-      <file url="mock:///RestfulBox-Editor:Response" />
-    </disable_hints>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -38,6 +74,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProblemsViewState">
@@ -47,25 +84,33 @@
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2hMRMcIaVfdqAmvNSPZskDDrkJS" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;disable.download.node.interpreter.editor.notification&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/AzMyCode/AMyCode/VueProject/MyVantAxios&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/MyCode/A_GXKS/Project/ComPJ/QianHou/LibrarySM&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.run.executor&quot;: &quot;Run&quot;,
     &quot;npm.serve.executor&quot;: &quot;Run&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\PC SoftWare\\RuanJi\\IntelliJ IDEA 2024.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\PC SoftWare\\RuanJi\\WebStorm 2024.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -91,7 +136,8 @@
       <scripts>
         <script value="serve" />
       </scripts>
-      <node-interpreter value="project" />
+      <node-interpreter value="C:/Program Files/nodejs/node" />
+      <package-manager value="npm" />
       <envs />
       <method v="2" />
     </configuration>
@@ -99,8 +145,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-WS-241.14494.235" />
       </set>
     </attachedChunks>
   </component>
@@ -133,6 +178,20 @@
       <workItem from="1718456845108" duration="1373000" />
       <workItem from="1718481865343" duration="1867000" />
       <workItem from="1718485474786" duration="10343000" />
+      <workItem from="1718564434179" duration="357000" />
+      <workItem from="1718596909558" duration="12556000" />
+      <workItem from="1718611368741" duration="9889000" />
+      <workItem from="1718630275521" duration="610000" />
+      <workItem from="1718688052263" duration="1669000" />
+      <workItem from="1718713328259" duration="291000" />
+      <workItem from="1778486755115" duration="338000" />
+      <workItem from="1780231993112" duration="172000" />
+      <workItem from="1780237057361" duration="2930000" />
+      <workItem from="1780273273964" duration="229000" />
+      <workItem from="1780311604195" duration="13627000" />
+      <workItem from="1781016177406" duration="10000" />
+      <workItem from="1781016224071" duration="13343000" />
+      <workItem from="1781508174416" duration="299000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -142,7 +201,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717686130284</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="第四次617">
+      <option name="closed" value="true" />
+      <created>1718563380420</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1718563380420</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,14 +220,30 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'" />
+    <MESSAGE value="第四次617" />
+    <MESSAGE value="第五次2026.6.15" />
+    <option name="LAST_COMMIT_MESSAGE" value="第五次2026.6.15" />
   </component>
 </project>

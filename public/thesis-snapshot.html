@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thesis Snapshot Helper</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: #f7f5f2;
+      color: #1f2937;
+      font: 16px/1.5 "Microsoft YaHei", Arial, sans-serif;
+    }
+    .panel {
+      width: min(560px, calc(100vw - 48px));
+      padding: 28px 32px;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 22px;
+    }
+    p {
+      margin: 0 0 10px;
+      color: #4b5563;
+    }
+    code {
+      color: #b45309;
+      background: #fff7ed;
+      padding: 2px 6px;
+      border-radius: 6px;
+    }
+    .status {
+      margin-top: 16px;
+      color: #111827;
+      font-weight: 600;
+    }
+    .error {
+      color: #b91c1c;
+    }
+  </style>
+</head>
+<body>
+  <div class="panel">
+    <h1>论文截图助手</h1>
+    <p>该页面会自动使用演示账号登录，并跳转到指定前端路由。</p>
+    <p>当前角色：<code id="roleText">admin</code></p>
+    <p>目标路由：<code id="targetText">/home</code></p>
+    <div class="status" id="status">准备中...</div>
+  </div>
+  <script>
+    (async function () {
+      const params = new URLSearchParams(window.location.search);
+      const role = params.get("role") || "admin";
+      const target = params.get("target") || (role === "admin" ? "/home" : "/bookstore");
+      const wait = Number(params.get("wait") || 300);
+      const password = params.get("password") || "123456";
+      const backend = "http://localhost:8081";
+
+      const roleText = document.getElementById("roleText");
+      const targetText = document.getElementById("targetText");
+      const status = document.getElementById("status");
+      roleText.textContent = role;
+      targetText.textContent = target;
+
+      function setStatus(text, isError) {
+        status.textContent = text;
+        status.className = isError ? "status error" : "status";
+      }
+
+      try {
+        setStatus("正在读取演示账号...");
+        const demoRes = await fetch(backend + "/demoAccounts");
+        const demoJson = await demoRes.json();
+        const account = (demoJson.data || []).find(item => item.role === role);
+        if (!account) {
+          throw new Error("未找到角色为 " + role + " 的演示账号");
+        }
+
+        setStatus("正在登录账号 " + account.userName + " ...");
+        const loginRes = await fetch(backend + "/login", {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify({
+            userName: account.userName,
+            passWord: password
+          })
+        });
+        const loginJson = await loginRes.json();
+        if (!loginJson.status || !loginJson.data) {
+          throw new Error(loginJson.msg || "登录失败");
+        }
+
+        const payload = loginJson.data;
+        if (payload.token) sessionStorage.setItem("token", payload.token);
+        sessionStorage.setItem("logined", "true");
+        sessionStorage.setItem("userName", payload.userName || "");
+        sessionStorage.setItem("realName", payload.realName || "");
+        sessionStorage.setItem("role", payload.role || "");
+        sessionStorage.setItem("uid", payload.uid || "");
+        sessionStorage.setItem("avatar", payload.avatar || "");
+
+        setStatus("登录成功，正在跳转...");
+        setTimeout(() => {
+          window.location.replace(target);
+        }, wait);
+      } catch (err) {
+        setStatus("截图助手执行失败：" + (err && err.message ? err.message : err), true);
+      }
+    })();
+  </script>
+</body>
+</html>

@@ -1,4 +1,80 @@
-*{
+/* ===== Claude 风格暖色调全局样式 ===== */
+:root {
+    --claude-bg: #FAF9F7;
+    --claude-bg-warm: #F5F0EB;
+    --claude-sidebar: #1A1A1A;
+    --claude-primary: #CC785C;
+    --claude-primary-light: #E8A88C;
+    --claude-accent: #D4A574;
+    --claude-text: #1A1A1A;
+    --claude-text-secondary: #6B6560;
+    --claude-text-muted: #9B9590;
+    --claude-border: #E8E4DF;
+    --claude-card: #FFFFFF;
+    --claude-hover: #EDE8E3;
+    --claude-success: #5B8C5A;
+    --claude-danger: #C45B4A;
+    --claude-warning: #C49A3C;
+    --claude-info: #5B7B8C;
+}
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB",
+        "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--claude-bg);
+    color: var(--claude-text);
+}
+
+/* Arco Design 主题覆盖 */
+:root {
+    --color-primary-6: #CC785C !important;
+    --color-primary-5: #D4896F !important;
+    --color-primary-7: #B56A50 !important;
+    --color-success-6: #5B8C5A !important;
+    --color-danger-6: #C45B4A !important;
+    --color-warning-6: #C49A3C !important;
+}
+
+/* 全局滚动条美化 */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #D4CFC8;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #B8B2AA;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* 全局卡片圆角 */
+.arco-card {
+    border-radius: 12px !important;
+    border: 1px solid var(--claude-border) !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* 全局按钮圆角 */
+.arco-btn {
+    border-radius: 8px !important;
+}
+
+/* 全局 Tag 样式微调 */
+.arco-tag {
+    border-radius: 6px !important;
 }
